@@ -18,6 +18,8 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 700px;
+    max-width: 700px;
+    min-width: 500px;
     border-radius: 5px;
     background: rgb(218, 218, 218);
     flex-direction: column;
@@ -25,6 +27,7 @@
     align-items: center;
     padding: 10px;
     gap: 20px;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.248);
 }
 
 .Titulo_add, .descricao_add, .prioridade_add, .Categoria_add {
@@ -158,4 +161,61 @@
     top: 0;
     transform: translateY(-20px);
     font-size: 20px;
+}
+
+.Salva {
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0;
+}
+
+
+.Salva > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    margin-left: 5%;
+    background: rgb(34, 105, 219);
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+
+@media (max-width: 700px) {
+    .AddConteiner {
+        width: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+    .AddConteiner {
+        width: 500px;
+    }
+}
+
+.alert {
+    opacity: 0;
+    display: block;
+}
+
+.Error {
+    display: block;
+    color: rgb(220, 42, 42);
+    animation: error 1s ease-in-out infinite forwards;
+    opacity: 1;
+}
+
+@keyframes error {
+    from { 
+        color: rgb(220, 42, 42);
+    }
+    to {
+        color: black;
+    }
 }

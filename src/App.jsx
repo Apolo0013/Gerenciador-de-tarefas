@@ -22,6 +22,11 @@ function App() {
 
     */
     
+    function desfoqueApp() {
+        SetclassApp('App blur')
+    }
+
+
     function Add() {
         function Onder(dic) {
             function Range(start = 1, end) {
@@ -77,31 +82,33 @@ function App() {
     const [Tarefas, SetListCard] = useState([])
     const id = useRef(1)
     
+    //Desfoque, class do div main
+    const [classApp, SetclassApp] = useState('App')
 
     return (
-        <div className="App">
-            <header className="header">
-                <h1>Gereciador de Tarefas</h1>
-                <div>
-                    <Botao nome="Adicionar" fun="add" funClick={Add} />        
-                    <Botao nome="Editar" fun="del"/>        
-                    <Botao nome="Remover" fun="ed"/>        
+        <main>
+            <div className={classApp}>
+                <header className="header">
+                    <h1>Gereciador de Tarefas</h1>
+                    <div>
+                        <Botao nome="Adicionar" fun="add" funClick={Add} />
+                        <Botao nome="Editar" fun="del"/>
+                        <Botao nome="Remover" fun="ed"/>
+                    </div>
+                </header>
+                <div className="tarefas">
+                    <div className="headtarefas">
+                        <div>Indice</div>
+                        <div>Nome da Tarefas</div>
+                        <div className="feito">Concluido</div>
+                    </div>
+                    {Tarefas.map((info) => (
+                        <Card info={info}  key={info.id}></Card>
+                    )) }
                 </div>
-            </header>
-            <div className="tarefas">
-                <div className="headtarefas">
-                    <div>Indice</div>
-                    <div>Nome da Tarefas</div>
-                    <div className="feito">Concluido</div>
-
-                </div>
-                {Tarefas.map((info) => (
-                    <Card info={info}  key={info.id}></Card>
-                )) }
             </div>
-
-            <FunAdd></FunAdd>
-        </div>
+            <FunAdd desfoque={desfoqueApp}></FunAdd>
+        </main>
     )
 }
 
