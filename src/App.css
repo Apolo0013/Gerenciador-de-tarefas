@@ -1,0 +1,91 @@
+:root {
+    --cor-cabecalho: #2F3C7E;
+    --cor-titulo: #FBEAEB;
+    --cor-botao-add: #3FA796;
+    --cor-botao-editar: #F4D35E;
+    --cor-botao-remover: #EE6C4D;
+    --cor-card-tarefa: #EDEDED;
+    --cor-texto-card: #2F3C7E;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.App {
+    font-family: 'Bebas Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background: var(--cor-cabecalho);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.314);
+}
+
+header > h1 {
+    padding: 20px;
+    font-size: 60px;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    border-bottom: 4px solid var(--cor-titulo);
+    border-top: 4px solid var(--cor-titulo);
+    color: var(--cor-titulo);
+}
+
+header > h1::before {
+    content: "---";
+    margin-right: 5px;
+    letter-spacing: -2px;
+    width: 50px;
+}
+
+header > div {
+    padding: 20px;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.tarefas {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+
+.headtarefas {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 35px;
+    gap: 90px;
+    border-bottom: 5px solid var(--cor-texto-card);
+    margin-bottom: 20px;
+}
+
+.headtarefas > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.headtarefas > div:nth-child(3) {
+    font-size: 35px;
+    right: 50px;
+    width: auto;
+    width: 90px;
+}

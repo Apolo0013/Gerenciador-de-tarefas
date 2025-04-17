@@ -1,0 +1,42 @@
+.botao {
+    width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.add {
+    background: #3FA796;
+    color: white;
+}
+
+.editar {
+    background: #F4D35E; 
+    color: white;
+}
+
+.delete {
+    background: #EE6C4D; 
+    color: black;
+}
+
+.botao:hover {
+    color: white;
+    filter: brightness(0.7);
+    transform: scale(1.03);
+}
+
+.botao:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 770px) {
+    .botao {
+        font-size: 25px;
+    }
+}

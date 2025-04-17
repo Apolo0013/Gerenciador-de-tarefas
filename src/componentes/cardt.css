@@ -1,0 +1,59 @@
+.card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    background: rgb(130, 130, 130);
+    gap: 30px;    
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.index, .nome, .feito {
+    padding: 10px;
+}
+
+.index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cor-texto-card);
+    height: 100%;
+    color: white;
+    width: 100px;
+    font-size: 35px;
+}
+
+.nome {
+    font-size: 30px;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.feito {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    width: 160px;
+    font-size: 30px;
+    height: 100%;
+}
+
+.nofeito {
+    background: rgb(152, 38, 38);
+    color: white;
+}
+
+.simfeito {
+    background: rgb(32, 219, 128);
+    color: black;
+}
+
+.card:hover {
+    transform: translateX(-10px);
+}
